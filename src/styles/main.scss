@@ -1,3 +1,48 @@
+html {
+  font-family: "Manrope", sans-serif;
+  color: #1B2129;
+}
+
 body {
   margin: 0;
 }
+.header {
+  box-sizing: border-box;
+  padding: 32px 72px;
+  background-image: url("../images/Image.png");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__icon {
+  display: flex;
+  gap: 32px;
+}
+
+
+.icon{
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.icon--menu {
+  background-image: url("../images/icons/Icon-Burger-menu.png");
+}
+.icon--phone {
+  background-image: url("../images/icons/Icon-Phone-call.png");
+}
+
+
+
