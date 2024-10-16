@@ -162,8 +162,6 @@
   row-gap: 64px;
   padding-block: 64px;
 
-  @include content-padding-inline;
-
   @include on-tablet {
     row-gap: 120px;
     padding-block: 120px;
@@ -196,6 +194,8 @@
     display: grid;
     row-gap: 40px;
 
+    @include content-padding-inline;
+
     @include on-tablet {
       row-gap: 56px;
       justify-items: center;
@@ -216,3 +216,182 @@
 }
 
 /* #endregion RECOMMENDED */
+
+/* #region CATEGORIES */
+
+.categories {
+  &__wrapper {
+    @include content-padding-inline;
+
+    display: grid;
+    row-gap: 40px;
+
+    @include on-tablet {
+      row-gap: 56px;
+    }
+  }
+
+  &__title {
+    @include content-padding-inline;
+
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 700;
+
+    @include on-tablet {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @include on-desktop {
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+}
+
+.category {
+  &__photos {
+    @include page-grid;
+  }
+
+  &__link {
+    @include on-tablet {
+      grid-column: span 3;
+    }
+
+    @include on-desktop {
+      grid-column: span 6;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__name {
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25.2px;
+  }
+}
+
+/* #endregion CATEGORIES */
+
+/* #region ABOUT */
+
+.about {
+  position: relative;
+  background-color: #fcfaef;
+  &__content {
+    @include content-padding-inline;
+
+    margin-bottom: 48px;
+
+    --columns: 2;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: 24px 20px;
+    margin-top: 48px;
+
+    @include on-tablet {
+      --columns: 6;
+
+      column-gap: 24px;
+
+      margin-bottom: 120px;
+    }
+
+    @include on-desktop {
+      --columns: 12;
+
+      column-gap: 24px;
+    }
+  }
+
+  &__image {
+    background-image: url('../images/about-image.png');
+
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+
+    @include on-tablet {
+      height: 400px;
+    }
+
+    @include on-desktop {
+      height: 460px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    grid-column: 1 / -1;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 700;
+
+    @include on-tablet {
+      grid-column: 1 / 3;
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @include on-desktop {
+      grid-column: 1 / 6;
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    grid-column: 1 / -1;
+    font-size: 16px;
+    line-height: 22.4px;
+    font-weight: 400;
+
+    @include on-tablet {
+      grid-column: 4 / -1;
+    }
+
+    @include on-desktop {
+      grid-column: 8 / -1;
+      letter-spacing: 0.15px;
+    }
+  }
+}
+
+/* #endregion ABOUT */
+
+/* #region CONTACT */
+.contact {
+  &__input {
+    display: flex;
+    justify-content: center;
+
+    .input {
+      width: $input-width;
+      height: $input-height;
+      background-color: $input-color;
+      border-radius: $input-border-radius;
+      border: 1px solid $input-color;
+      margin-bottom: 16px;
+      padding-left: 10px; /* Додаємо відступ зліва для тексту */
+
+      &--Massage {
+        height: 148px;
+        padding: 14px 16px;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+/* #endregion CONTACT */
