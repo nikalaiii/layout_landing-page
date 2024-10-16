@@ -44,3 +44,32 @@
     --columns: 12;
   }
 }
+
+@mixin set-button {
+  display: flex;
+  justify-content: center;
+  height: $button-height;
+  width: $button-width;
+  border-radius: $button-radius;
+  background-color: $button-color;
+  
+  text-align: center;
+
+  &__link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+
+  }
+  
+  &:hover {
+   background-color: $button-hover-color;}
+  
+  &:active {
+    color: $button-passed-color;
+  }
+}
+

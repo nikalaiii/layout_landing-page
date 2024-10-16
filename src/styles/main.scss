@@ -372,26 +372,42 @@
 
 /* #region CONTACT */
 .contact {
+  
+  &__wrapper {
+    
+
+  @include page-grid;
+  }
+
   &__input {
-    display: flex;
-    justify-content: center;
+
+    
+    
+    width: 100%;
+    row-gap: 16px;
 
     .input {
-      width: $input-width;
+      grid-column: 1 / -1;
       height: $input-height;
       background-color: $input-color;
       border-radius: $input-border-radius;
       border: 1px solid $input-color;
-      margin-bottom: 16px;
-      padding-left: 10px; /* Додаємо відступ зліва для тексту */
+      
+      
 
       &--Massage {
         height: 148px;
-        padding: 14px 16px;
+        
         gap: 10px;
       }
     }
   }
+}
+
+.button__send {
+  margin: auto;
+
+  @include set-button;
 }
 
 /* #endregion CONTACT */
