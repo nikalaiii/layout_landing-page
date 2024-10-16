@@ -373,33 +373,76 @@
 /* #region CONTACT */
 .contact {
   &__wrapper {
+    @include content-padding-inline;
     @include page-grid;
-  }
 
-  &__input {
-    width: 100%;
     row-gap: 16px;
-
-    .input {
-      grid-column: 1 / -1;
-      height: $input-height;
-      background-color: $input-color;
-      border-radius: $input-border-radius;
-      border: 1px solid $input-color;
-
-      &--Massage {
-        height: 148px;
-
-        gap: 10px;
-      }
-    }
   }
 }
 
-.button__send {
-  margin: auto;
+.input {
+  grid-column: 1 / -1;
+
+  height: $input-height;
+  background-color: $input-color;
+  border-radius: $input-border-radius;
+  border: 1px solid $input-color;
+  padding-left: 16px;
+
+  @include on-desktop {
+    grid-column: 1 / 7;
+  }
+
+  &::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    letter-spacing: 0.15px;
+  }
+}
+
+.input--Massage {
+  height: 148px;
+
+  &::placeholder {
+    font-family: Manrope, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    letter-spacing: 0.15px;
+  }
+}
+
+.contact__button {
+  grid-column: 1 / -1;
 
   @include set-button;
+
+  @include on-desktop {
+    grid-column: 1 / 7;
+  }
+}
+
+.contact__info {
+  grid-column: 1 / 3;
+
+  @include on-desktop {
+    grid-column: 8 / 10;
+  }
+
+  &--first {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    letter-spacing: 0.15px;
+  }
+
+  &--second {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    letter-spacing: 0.15px;
+  }
 }
 
 /* #endregion CONTACT */
