@@ -52,7 +52,7 @@
   width: $button-width;
   border-radius: $button-radius;
   background-color: $button-color;
-  
+
   text-align: center;
 
   &__link {
@@ -62,14 +62,13 @@
     text-align: center;
     text-decoration: none;
     color: white;
-
   }
-  
+
   &:hover {
-   background-color: $button-hover-color;}
-  
+    background-color: $button-hover-color;
+  }
+
   &:active {
     color: $button-passed-color;
   }
 }
-

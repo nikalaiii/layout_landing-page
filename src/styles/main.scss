@@ -372,17 +372,11 @@
 
 /* #region CONTACT */
 .contact {
-  
   &__wrapper {
-    
-
-  @include page-grid;
+    @include page-grid;
   }
 
   &__input {
-
-    
-    
     width: 100%;
     row-gap: 16px;
 
@@ -392,12 +386,10 @@
       background-color: $input-color;
       border-radius: $input-border-radius;
       border: 1px solid $input-color;
-      
-      
 
       &--Massage {
         height: 148px;
-        
+
         gap: 10px;
       }
     }
