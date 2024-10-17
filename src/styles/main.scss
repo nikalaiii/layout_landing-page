@@ -32,7 +32,7 @@
 }
 
 .header__bottom {
-  padding: 0px, 120px;
+  padding: 0, 120px;
 }
 
 .top-bar__logo {
@@ -376,17 +376,19 @@
 
 /* #region CONTACT */
 .contact {
-  &__wrapper {
-    @include content-padding-inline;
-    @include page-grid;
+
+  @include page-grid;
 
     row-gap: 16px;
-  }
+
+    @include content-padding-inline;
+
+   
 }
 
 .input {
   grid-column: 1 / -1;
-
+  
   height: $input-height;
   background-color: $input-color;
   border-radius: $input-border-radius;
