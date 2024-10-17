@@ -32,7 +32,16 @@
 }
 
 .header__bottom {
-  padding: 0, 120px;
+  @include content-padding-inline;
+
+  margin-bottom: 64px;
+
+  &--title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 56px;
+    color: #fff;
+  }
 }
 
 .top-bar__logo {
@@ -65,7 +74,9 @@
 }
 
 .top-bar {
-  padding: 32px 120px;
+  @include content-padding-inline;
+
+  padding: 32px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -209,6 +220,10 @@
       grid-template-columns: repeat(3, 1fr);
       column-gap: 24px;
       justify-items: stretch;
+    }
+
+    &--title {
+      grid-column: 1 / -1;
     }
   }
 }
@@ -376,28 +391,35 @@
 
 /* #region CONTACT */
 .contact {
-
   @include page-grid;
 
-    row-gap: 16px;
+  row-gap: 16px;
 
-    @include content-padding-inline;
+  @include content-padding-inline;
 
-   
+  &-title {
+    grid-column: 1 / -1;
+  }
 }
 
-.input {
+.contact__wrapper {
   grid-column: 1 / -1;
-  
-  height: $input-height;
-  background-color: $input-color;
-  border-radius: $input-border-radius;
-  border: 1px solid $input-color;
-  padding-left: 16px;
 
   @include on-desktop {
     grid-column: 1 / 7;
   }
+}
+
+.input {
+  background-color: #f9f9f9;
+  border: 1px solid #f9f9f9;
+  border-radius: 8px;
+  height: 48px;
+  padding-left: 16px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 16px;
 
   &::placeholder {
     font-size: 14px;
@@ -430,14 +452,15 @@
   }
 }
 
-.contact__info {
-  grid-column: 1 / 3;
+.contact__decription {
+  grid-column: 1 / -1;
 
   @include on-desktop {
     grid-column: 8 / 10;
-    grid-row: 1 / 3;
   }
+}
 
+.contact__info {
   &--first {
     margin-bottom: 8px;
     font-size: 14px;
