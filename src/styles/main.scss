@@ -15,24 +15,31 @@
 /* #region HEADER */
 
 .header {
-  box-sizing: border-box;
+  
 
   background-image: url('../images/Image.png');
-  height: 100vh;
+  
   background-size: cover;
   background-position: center;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  
 
   &__title {
     margin: 0;
   }
+
+  &__wrapper {
+    @include content-padding-inline;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    
+  }
 }
 
 .header__bottom {
-  @include content-padding-inline;
+  
 
   margin-bottom: 64px;
 
@@ -74,7 +81,7 @@
 }
 
 .top-bar {
-  @include content-padding-inline;
+  
 
   padding: 32px 0;
   display: flex;
